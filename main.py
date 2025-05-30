@@ -11,7 +11,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-BOT_TOKEN = os.getenv "7637420996:AAFn_wcmd-eJ2v8xQiFFiSil05r6EBaLKL0"
+BOT_TOKEN = os.getenv "7637420996:AAFFFOTd99wjOwaOX0L6JXvaRjG_C2jmWwQ"
 ADMIN_USERNAME = "DGKon"  # your telegram username (without @)
 
 # Example signals (You can update later or fetch dynamically)
