@@ -1,26 +1,17 @@
-app = "telegrambot-ig0xgq"  # replace this with your Fly app name
-
-[build]
-  image = "docker.io/library/python:3.12-slim"
+app = "dgk-telegrambot"
+kill_signal = "SIGINT"
+kill_timeout = 5
+processes = []
 
 [env]
-  # Bot token will be set as secret on Fly, so not here
+PORT = "8080"
 
-[deploy]
-  release_command = ""
+[experimental]
+auto_rollback = true
 
 [[services]]
   internal_port = 8080
   protocol = "tcp"
 
-  [services.concurrency]
-    hard_limit = 25
-    soft_limit = 20
-
   [[services.ports]]
-    handlers = ["http"]
     port = 80
-
-  [[services.ports]]
-    port = 443
-    
